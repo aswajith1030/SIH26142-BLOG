@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeepSRM-AI — Super Resolution Mapping for Satellite Imagery | AMASTRA TECH</title>
+  <meta name="description" content="DeepSRM-AI by AMASTRA TECH: Deep Learning Based Super Resolution Mapping (SRM) from Medium Resolution Sentinel-2 Satellite Imageries for SIH26142 Space Technology.">
+  <meta name="theme-color" content="#120a2a">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-purple">
+
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- Sticky Navigation Header -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="#hero" class="brand-logo" aria-label="AMASTRA TECH Home">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">AMASTRA TECH</span>
+          <span class="brand-subtitle">DeepSRM-AI • SIH26142</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#challenge" class="nav-link">Challenge</a></li>
+          <li><a href="#technology" class="nav-link">Technology</a></li>
+          <li><a href="#innovation" class="nav-link">Innovation</a></li>
+          <li><a href="#applications" class="nav-link">Applications</a></li>
+          <li><a href="#gis-simulator" class="nav-link">GIS Simulator</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#team" class="nav-link">Team</a></li>
+          <li><a href="#references" class="nav-link">References</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action CTA -->
+      <div class="nav-actions">
+        <a href="#gis-simulator" class="btn btn-primary btn-glow">
+          <span>Explore DeepSRM-AI</span>
+        </a>
+        <button class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#challenge" class="nav-link">Challenge</a>
+      <a href="#technology" class="nav-link">Technology</a>
+      <a href="#innovation" class="nav-link">Innovation</a>
+      <a href="#applications" class="nav-link">Applications</a>
+      <a href="#gis-simulator" class="nav-link">GIS Simulator</a>
+      <a href="#blog" class="nav-link">Blog</a>
+      <a href="#team" class="nav-link">Team</a>
+      <a href="#references" class="nav-link">References</a>
+      <a href="#gis-simulator" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">
+        Explore DeepSRM-AI
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HERO SECTION WITH MOVABLE INTERACTIVE CANVAS -->
+    <section class="hero" id="hero">
+      <!-- Interactive Orbital Particle Canvas -->
+      <canvas id="hero-orbital-canvas" class="hero-canvas"></canvas>
+      
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badges">
+            <span class="badge badge-cyan badge-animated">
+              <span class="pulse-ring"></span> SIH26142
+            </span>
+            <span class="badge badge-indigo">Space Technology</span>
+            <span class="badge badge-primary">AMASTRA TECH</span>
+          </div>
+          
+          <h1 class="hero-title">
+            DeepSRM-AI
+          </h1>
+          
+          <h2 class="hero-subheading">
+            AI-Powered Super Resolution Mapping for Fine-Scale Satellite Analysis
+          </h2>
+          
+          <p class="hero-text">
+            Transforming medium-resolution Sentinel-2 imagery into enhanced fine-resolution imagery and semantic land-cover maps using deep learning.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#technology" class="btn btn-primary btn-glow">
+              <span>Explore Technology</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+            <a href="#blog" class="btn btn-secondary">
+              <span>Read Our Research</span>
+            </a>
+          </div>
+
+          <!-- Hero Metric Counters -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">10m → 2.5m</span>
+              <span class="stat-label">Resolution Scaling</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">13 Bands</span>
+              <span class="stat-label">Multispectral Focus</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">Dual-Head</span>
+              <span class="stat-label">Image + Subpixel Maps</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Transformation Flow Diagram with Animated Scan Beam -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-card-glow"></div>
+          <div class="hero-visual-card tilt-card">
+            <div class="hero-visual-header">
+              <div class="hero-visual-title">
+                <span class="pulse-dot"></span>
+                <span>AI Super Resolution Pipeline</span>
+              </div>
+              <span class="badge badge-cyan">Level-2A BOA Input</span>
+            </div>
+
+            <!-- Movable Laser Scan Line Overlay -->
+            <div class="visual-scan-beam"></div>
+
+            <div class="transformation-flow">
+              <div class="flow-step">
+                <div class="flow-step-icon step-icon-1">10m</div>
+                <div class="flow-step-content">
+                  <div class="flow-step-label">Input Stage</div>
+                  <div class="flow-step-name">10m Sentinel-2 Input (13 Bands)</div>
+                </div>
+              </div>
+
+              <div class="flow-arrow animated-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"/>
+                  <polyline points="19 12 12 19 5 12"/>
+                </svg>
+              </div>
+
+              <div class="flow-step">
+                <div class="flow-step-icon step-icon-2">AI</div>
+                <div class="flow-step-content">
+                  <div class="flow-step-label">Processing Engine</div>
+                  <div class="flow-step-name">AI Super Resolution Mapping (U-Net)</div>
+                </div>
+              </div>
+
+              <div class="flow-arrow animated-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"/>
+                  <polyline points="19 12 12 19 5 12"/>
+                </svg>
+              </div>
+
+              <div class="flow-step">
+                <div class="flow-step-icon step-icon-3">2.5m</div>
+                <div class="flow-step-content">
+                  <div class="flow-step-label">Primary Output</div>
+                  <div class="flow-step-name">Fine-Resolution Image + Land-Cover Map</div>
+                </div>
+              </div>
+
+              <div class="flow-arrow animated-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"/>
+                  <polyline points="19 12 12 19 5 12"/>
+                </svg>
+              </div>
+
+              <div class="flow-step">
+                <div class="flow-step-icon step-icon-4">UNC</div>
+                <div class="flow-step-content">
+                  <div class="flow-step-label">Quality Assurance</div>
+                  <div class="flow-step-name">Uncertainty / Confidence Map</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT DEEPSRM-AI -->
+    <section class="section-padding section-bg-alt" id="about">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Project Overview</span>
+          <h2 class="section-title">What is DeepSRM-AI?</h2>
+          <p class="section-subtitle">
+            DeepSRM-AI is an AI-based Super-Resolution Mapping framework that learns the relationship between medium-resolution Sentinel-2 imagery and high-resolution reference data to estimate fine-scale spatial information.
+          </p>
+        </div>
+
+        <div class="about-cards">
+          <div class="card tilt-card reveal-on-scroll">
+            <div class="card-icon-box card-icon-blue">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Enhanced Multispectral Imagery</h3>
+            <p class="card-text">
+              Reconstructs high-frequency spatial details across Sentinel-2's 10m and 20m spectral bands while preserving physical radiometric surface reflectance ratios.
+            </p>
+          </div>
+
+          <div class="card tilt-card reveal-on-scroll">
+            <div class="card-icon-box card-icon-indigo">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Fine-Resolution Semantic Maps</h3>
+            <p class="card-text">
+              Generates high-precision sub-pixel land-cover classifications, separating crops, buildings, roads, soil, and water boundaries that are mixed in 10m input pixels.
+            </p>
+          </div>
+
+          <div class="card tilt-card reveal-on-scroll">
+            <div class="card-icon-box card-icon-cyan">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M12 8v4"/>
+                <path d="M12 16h.01"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Confidence & Uncertainty Data</h3>
+            <p class="card-text">
+              Quantifies spatial prediction confidence at every subpixel location, providing essential validation metrics for mission-critical decision-making.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE CHALLENGE -->
+    <section class="section-padding" id="challenge">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Remote Sensing Bottlenecks</span>
+          <h2 class="section-title">The Challenge</h2>
+          <p class="section-subtitle">
+            Current limitations in freely available satellite earth observation imagery constrain localized decision-making.
+          </p>
+        </div>
+
+        <div class="challenge-grid">
+          <div class="challenge-card tilt-card reveal-on-scroll">
+            <div class="challenge-num">01</div>
+            <div>
+              <h3 class="challenge-title">Limited Spatial Resolution</h3>
+              <p class="challenge-desc">10m Sentinel-2 imagery does not provide sufficient spatial detail for fine-scale analysis.</p>
+            </div>
+          </div>
+
+          <div class="challenge-card tilt-card reveal-on-scroll">
+            <div class="challenge-num">02</div>
+            <div>
+              <h3 class="challenge-title">Mixed Pixels</h3>
+              <p class="challenge-desc">A single coarse pixel may contain multiple land-cover classes such as crops, roads, buildings, soil and water.</p>
+            </div>
+          </div>
+
+          <div class="challenge-card tilt-card reveal-on-scroll">
+            <div class="challenge-num">03</div>
+            <div>
+              <h3 class="challenge-title">Missing Fine Features</h3>
+              <p class="challenge-desc">Small buildings, narrow roads, field boundaries and localized damage may remain unclear.</p>
+            </div>
+          </div>
+
+          <div class="challenge-card tilt-card reveal-on-scroll">
+            <div class="challenge-num">04</div>
+            <div>
+              <h3 class="challenge-title">Reduced Analytical Utility</h3>
+              <p class="challenge-desc">Limited spatial detail can affect land-cover mapping, change detection, agriculture monitoring and disaster assessment.</p>
+            </div>
+          </div>
+
+          <!-- Highlighted Card -->
+          <div class="challenge-highlight-card tilt-card reveal-on-scroll">
+            <div class="highlight-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="challenge-title" style="color: var(--secondary-violet);">Uncertain Reconstruction</h3>
+              <p class="challenge-desc">AI-generated fine details may be model-inferred and therefore require validation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: TECHNICAL APPROACH (INTERACTIVE PIPELINE) -->
+    <section class="section-padding section-bg-alt" id="technology">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">End-to-End Architecture</span>
+          <h2 class="section-title">Technical Pipeline</h2>
+          <p class="section-subtitle">
+            Hover or click on any pipeline step below to explore our multi-stage deep learning processing methodology.
+          </p>
+        </div>
+
+        <div class="pipeline-wrapper reveal-on-scroll">
+          <!-- 7-Step Horizontal Stepper -->
+          <div class="pipeline-stepper" id="pipeline-stepper">
+            <div class="pipeline-step-item active" data-step="1">
+              <span class="step-number-tag">STEP 01</span>
+              <div class="step-label-title">Sentinel-2 Input</div>
+            </div>
+
+            <div class="pipeline-step-item" data-step="2">
+              <span class="step-number-tag">STEP 02</span>
+              <div class="step-label-title">Pre-processing</div>
+            </div>
+
+            <div class="pipeline-step-item" data-step="3">
+              <span class="step-number-tag">STEP 03</span>
+              <div class="step-label-title">Data Prep</div>
+            </div>
+
+            <div class="pipeline-step-item" data-step="4">
+              <span class="step-number-tag">STEP 04</span>
+              <div class="step-label-title">Feature Extraction</div>
+            </div>
+
+            <div class="pipeline-step-item" data-step="5">
+              <span class="step-number-tag">STEP 05</span>
+              <div class="step-label-title">SRM Model</div>
+            </div>
+
+            <div class="pipeline-step-item" data-step="6">
+              <span class="step-number-tag">STEP 06</span>
+              <div class="step-label-title">Output</div>
+            </div>
+
+            <div class="pipeline-step-item" data-step="7">
+              <span class="step-number-tag">STEP 07</span>
+              <div class="step-label-title">Validation</div>
+            </div>
+          </div>
+
+          <!-- Technical Inspector Drawer Card -->
+          <div class="pipeline-detail-card" id="pipeline-detail-card">
+            <div class="detail-header">
+              <div>
+                <h3 class="detail-title" id="pipeline-detail-title">STEP 01: Sentinel-2 Input Satellite Imagery</h3>
+                <span style="font-size: 0.85rem; color: var(--secondary-indigo); font-weight: 600;" id="pipeline-detail-subtitle">Multispectral Input Acquisition</span>
+              </div>
+              <span class="badge badge-primary">Interactive Stage</span>
+            </div>
+
+            <div class="detail-body">
+              <div>
+                <p id="pipeline-detail-desc" style="margin-bottom: 1rem;">
+                  DeepSRM-AI ingests freely accessible 10m Sentinel-2 satellite imagery containing 13 spectral bands covering optical, near-infrared (NIR), and short-wave infrared (SWIR) spectra.
+                </p>
+                <ul class="detail-list" id="pipeline-detail-list">
+                  <!-- Populated by JS -->
+                </ul>
+              </div>
+
+              <div class="detail-tech-badge-container" id="pipeline-detail-badges">
+                <!-- Badges populated by JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: MODEL AND LOSS FUNCTIONS -->
+    <section class="section-padding" id="loss-functions">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Objective Functions</span>
+          <h2 class="section-title">Learning for Spatial & Spectral Consistency</h2>
+          <p class="section-subtitle">
+            DeepSRM-AI uses a multi-objective loss function to enforce physical radiometry and sharp boundary alignment.
+          </p>
+        </div>
+
+        <div class="loss-grid">
+          <div class="loss-card tilt-card reveal-on-scroll">
+            <div>
+              <div class="loss-purpose">Purpose: Image Quality</div>
+              <h3 class="loss-name">Reconstruction Loss</h3>
+            </div>
+            <p class="loss-desc">Minimizes pixel-level mean squared error (MSE) and structural dissimilarity between reconstructed and reference surface reflectance.</p>
+          </div>
+
+          <div class="loss-card tilt-card reveal-on-scroll">
+            <div>
+              <div class="loss-purpose">Purpose: Land-Cover Accuracy</div>
+              <h3 class="loss-name">Semantic Loss</h3>
+            </div>
+            <p class="loss-desc">Uses categorical cross-entropy and Focal Loss to optimize sub-pixel categorical land-cover classifications.</p>
+          </div>
+
+          <div class="loss-card tilt-card reveal-on-scroll">
+            <div>
+              <div class="loss-purpose">Purpose: Spectral Preservation</div>
+              <h3 class="loss-name">Spectral Consistency Loss</h3>
+            </div>
+            <p class="loss-desc">Enforces Spectral Angle Mapper (SAM) constraints across all 13 bands to prevent spectral distortion of vegetation indices.</p>
+          </div>
+
+          <div class="loss-card tilt-card reveal-on-scroll">
+            <div>
+              <div class="loss-purpose">Purpose: Sharp Boundaries</div>
+              <h3 class="loss-name">Boundary / Edge Loss</h3>
+            </div>
+            <p class="loss-desc">Applies Sobel gradient constraints to sharpen structural transitions along roads, building footprints, and water margins.</p>
+          </div>
+
+          <div class="loss-card tilt-card reveal-on-scroll">
+            <div>
+              <div class="loss-purpose">Purpose: Geographic Alignment</div>
+              <h3 class="loss-name">Spatial Consistency Loss</h3>
+            </div>
+            <p class="loss-desc">Ensures sub-pixel reconstructed features conform strictly to projected spatial reference coordinate systems (CRS).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: INNOVATION -->
+    <section class="section-padding section-bg-alt" id="innovation">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Key Differentiators</span>
+          <h2 class="section-title">What Makes DeepSRM-AI Different?</h2>
+          <p class="section-subtitle">
+            Novel architectural enhancements designed specifically for Earth observation and remote sensing workflows.
+          </p>
+        </div>
+
+        <div class="innovation-grid">
+          <div class="innovation-card tilt-card reveal-on-scroll">
+            <span class="innovation-badge">FEATURE 01</span>
+            <h3 class="innovation-title">Direct Super Resolution</h3>
+            <p class="innovation-desc">Performs simultaneous spatial resolution enhancement and semantic land-cover prediction in a single unified neural forward pass, eliminating error accumulation.</p>
+          </div>
+
+          <div class="innovation-card tilt-card reveal-on-scroll">
+            <span class="innovation-badge">FEATURE 02</span>
+            <h3 class="innovation-title">Subpixel Mapping</h3>
+            <p class="innovation-desc">Estimates sub-pixel land-cover class proportions and spatial arrangements within individual 10m coarse Sentinel-2 pixels.</p>
+          </div>
+
+          <div class="innovation-card tilt-card reveal-on-scroll">
+            <span class="innovation-badge">FEATURE 03</span>
+            <h3 class="innovation-title">Multi-task Learning</h3>
+            <p class="innovation-desc">Jointly optimizes multispectral surface reflectance reconstruction alongside categorical land-cover segmentation using shared feature representations.</p>
+          </div>
+
+          <div class="innovation-card tilt-card reveal-on-scroll">
+            <span class="innovation-badge">FEATURE 04</span>
+            <h3 class="innovation-title">Spectral & Geographic Consistency</h3>
+            <p class="innovation-desc">Incorporates domain-specific loss functions that preserve physical radiometry across all 13 Sentinel-2 bands while maintaining spatial alignment.</p>
+          </div>
+
+          <div class="innovation-card tilt-card reveal-on-scroll">
+            <span class="innovation-badge">FEATURE 05</span>
+            <h3 class="innovation-title">Uncertainty-Aware Output</h3>
+            <p class="innovation-desc">Generates pixel-level confidence maps to explicitly highlight model-inferred details requiring secondary expert verification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: APPLICATIONS -->
+    <section class="section-padding" id="applications">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Use Cases & Impact</span>
+          <h2 class="section-title">Domain Applications</h2>
+          <p class="section-subtitle">
+            Empowering critical decision-making across agricultural, urban, emergency, and environmental domains.
+          </p>
+        </div>
+
+        <!-- Interactive Applications Tabs -->
+        <div class="app-tabs reveal-on-scroll">
+          <button class="app-tab-btn active" data-app="agriculture">Agriculture</button>
+          <button class="app-tab-btn" data-app="urban">Urban Planning</button>
+          <button class="app-tab-btn" data-app="disaster">Disaster Management</button>
+          <button class="app-tab-btn" data-app="environment">Environment Monitoring</button>
+        </div>
+
+        <div class="app-content-box reveal-on-scroll">
+          <div>
+            <h3 class="app-info-title" id="app-info-title">Precision Agriculture & Crop Monitoring</h3>
+            <p class="app-info-desc" id="app-info-desc">
+              Sentinel-2 10m resolution often blends field boundaries, small irrigation channels, and heterogeneous crop patches. DeepSRM-AI unmixes sub-pixel vegetation metrics to delineate individual farm plots.
+            </p>
+            <ul class="app-feature-list" id="app-feature-list">
+              <!-- Populated by JS -->
+            </ul>
+          </div>
+
+          <div class="app-visual-wrapper">
+            <svg class="animated-radar-svg" width="220" height="220" viewBox="0 0 24 24" fill="none" stroke="var(--primary-medium)" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+              <circle cx="12" cy="12" r="3" fill="var(--accent-cyan-glow)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 17 & 8: INTERACTIVE GIS VISUAL SIMULATOR WITH AUTOMATED SCAN ANIMATION -->
+    <section class="section-padding section-bg-alt" id="gis-simulator">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Interactive Geospatial Visualizer</span>
+          <h2 class="section-title">Interactive GIS Visual Simulator</h2>
+          <p class="section-subtitle">
+            Drag the slider or click <strong>Auto Scan Demo</strong> to observe live resolution scaling from 10m Sentinel-2 Input to DeepSRM-AI 2.5m Super-Resolved Output.
+          </p>
+        </div>
+
+        <div class="gis-simulator-card reveal-on-scroll">
+          <div class="gis-controls-bar">
+            <div>
+              <span id="gis-layer-title" style="font-weight: 700; font-size: 0.9rem; color: var(--text-dark);">
+                Active View Mode: Satellite RGB
+              </span>
+              <button id="auto-scan-btn" class="btn btn-outline-cyan" style="padding: 0.35rem 0.85rem; font-size: 0.75rem; margin-left: 0.75rem;">
+                ▶ Auto Scan Demo
+              </button>
+            </div>
+
+            <div class="layer-toggle-group">
+              <button class="layer-btn active" data-layer="satellite">Satellite RGB</button>
+              <button class="layer-btn" data-layer="landcover">Land Cover</button>
+              <button class="layer-btn" data-layer="roads">Roads</button>
+              <button class="layer-btn" data-layer="water">Water</button>
+              <button class="layer-btn" data-layer="uncertainty">Uncertainty</button>
+            </div>
+          </div>
+
+          <!-- Split Slider Container with Scan Laser Overlay -->
+          <div class="comparison-slider-container" id="comparison-slider">
+            <!-- Left Side: Coarse 10m Input -->
+            <div class="img-before">
+              <div class="simulated-map simulated-coarse"></div>
+              <span class="map-badge-label label-left">10m Sentinel-2 Coarse Input</span>
+            </div>
+
+            <!-- Right Side: Fine 2.5m DeepSRM-AI Output -->
+            <div class="img-after" id="img-after" style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);">
+              <div class="simulated-map simulated-fine" id="simulated-fine-layer"></div>
+              <span class="map-badge-label label-right">2.5m DeepSRM-AI Super-Resolved Output</span>
+            </div>
+
+            <!-- Divider Line & Movable Handle -->
+            <div class="comparison-divider" id="slider-divider" style="left: 50%;">
+              <div class="comparison-handle">↔</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: IMPACT & BENEFITS -->
+    <section class="section-padding" id="impact">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Value Proposition</span>
+          <h2 class="section-title">From Satellite Pixels to Actionable Maps</h2>
+          <p class="section-subtitle">
+            DeepSRM-AI makes freely available Sentinel-2 imagery more useful for detailed mapping and decision-making.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card tilt-card reveal-on-scroll">
+            <h3 class="benefit-card-title">Agriculture</h3>
+            <p class="benefit-card-text">Delineates micro-field boundaries and supports localized precision farming insights without requiring expensive aerial surveillance.</p>
+          </div>
+
+          <div class="benefit-card tilt-card reveal-on-scroll">
+            <h3 class="benefit-card-title">Urban Planning</h3>
+            <p class="benefit-card-text">Enables high-frequency building footprint and municipal infrastructure tracking from free satellite revisits.</p>
+          </div>
+
+          <div class="benefit-card tilt-card reveal-on-scroll">
+            <h3 class="benefit-card-title">Disaster Management</h3>
+            <p class="benefit-card-text">Provides rapid localized flood surface mapping and emergency evacuation route accessibility checks.</p>
+          </div>
+
+          <div class="benefit-card tilt-card reveal-on-scroll">
+            <h3 class="benefit-card-title">Environment</h3>
+            <p class="benefit-card-text">Monitors forest fragmentation edges, coastal wetland dynamics, and water-body surface shrinkage over time.</p>
+          </div>
+
+          <div class="benefit-card tilt-card reveal-on-scroll">
+            <h3 class="benefit-card-title">Economic Value</h3>
+            <p class="benefit-card-text">Reduces dependence on costly high-resolution imagery and manual analysis.</p>
+          </div>
+
+          <div class="benefit-card tilt-card reveal-on-scroll">
+            <h3 class="benefit-card-title">Responsible AI</h3>
+            <p class="benefit-card-text">Provides uncertainty maps to identify areas requiring verification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: UNCERTAINTY-AWARE AI -->
+    <section class="section-padding section-bg-alt" id="uncertainty">
+      <div class="container">
+        <div class="uncertainty-box reveal-on-scroll">
+          <div>
+            <span class="section-tag">Trust & Reliability</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">AI Reconstruction Needs Validation</h2>
+            <p style="margin-bottom: 1.25rem;">
+              AI-generated fine details may be model-inferred and therefore require validation.
+            </p>
+
+            <div class="uncertainty-legend">
+              <div class="legend-item">
+                <div class="legend-color color-high"></div>
+                <div>
+                  <strong>High Confidence Zone (>85%)</strong>
+                  <div style="font-size: 0.85rem; color: var(--text-muted);">Directly integrated into spatial GIS workflows</div>
+                </div>
+              </div>
+
+              <div class="legend-item">
+                <div class="legend-color color-mod"></div>
+                <div>
+                  <strong>Moderate Confidence Zone (60-85%)</strong>
+                  <div style="font-size: 0.85rem; color: var(--text-muted);">Recommended secondary algorithmic validation</div>
+                </div>
+              </div>
+
+              <div class="legend-item">
+                <div class="legend-color color-verify"></div>
+                <div>
+                  <strong>Needs Verification (<60%)</strong>
+                  <div style="font-size: 0.85rem; color: var(--text-muted);">Flagged for human GIS analyst review</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conceptual Heatmap Visual -->
+          <div class="uncertainty-map-visual">
+            <svg width="100%" height="100%" viewBox="0 0 400 300">
+              <rect width="400" height="300" fill="#120a2a"/>
+              <!-- High confidence zone -->
+              <circle cx="120" cy="150" r="80" fill="#10b981" opacity="0.45"/>
+              <!-- Moderate confidence zone -->
+              <circle cx="260" cy="120" r="70" fill="#f59e0b" opacity="0.45"/>
+              <!-- Needs verification zone -->
+              <circle cx="220" cy="220" r="50" fill="#ef4444" opacity="0.55"/>
+              <text x="120" y="155" font-size="12" font-weight="bold" fill="#6ee7b7" text-anchor="middle">High Confidence</text>
+              <text x="260" y="125" font-size="12" font-weight="bold" fill="#fde68a" text-anchor="middle">Moderate</text>
+              <text x="220" y="225" font-size="12" font-weight="bold" fill="#fca5a5" text-anchor="middle">Needs Verification</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: FEASIBILITY & VIABILITY -->
+    <section class="section-padding" id="feasibility">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Implementation Readiness</span>
+          <h2 class="section-title">Feasibility & Viability</h2>
+          <p class="section-subtitle">
+            Designed for practical deployment leveraging open datasets and existing computational infrastructure.
+          </p>
+        </div>
+
+        <div class="feasibility-grid">
+          <div class="feasibility-column tilt-card reveal-on-scroll">
+            <div class="column-header">
+              <div class="column-title">TECHNICAL FEASIBILITY</div>
+            </div>
+            <ul class="check-list">
+              <li class="check-item">
+                <span class="check-icon">✓</span>
+                <span>Uses existing AI, GIS, mapping and web technologies</span>
+              </li>
+              <li class="check-item">
+                <span class="check-icon">✓</span>
+                <span>Can begin with historical, public and simulated datasets</span>
+              </li>
+              <li class="check-item">
+                <span class="check-icon">✓</span>
+                <span>No expensive hardware is required for initial implementation</span>
+              </li>
+              <li class="check-item">
+                <span class="check-icon">✓</span>
+                <span>Weather, satellite, GPS and field-report APIs can be integrated later</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="feasibility-column tilt-card reveal-on-scroll">
+            <div class="column-header">
+              <div class="column-title">VIABILITY</div>
+            </div>
+            <ul class="check-list">
+              <li class="check-item">
+                <span class="check-icon">✓</span>
+                <span>Supports disaster-management and logistics teams</span>
+              </li>
+              <li class="check-item">
+                <span class="check-icon">✓</span>
+                <span>Can start in one region and expand</span>
+              </li>
+              <li class="check-item">
+                <span class="check-icon">✓</span>
+                <span>Uses existing digital infrastructure and data sources</span>
+              </li>
+              <li class="check-item">
+                <span class="check-icon">✓</span>
+                <span>Supports emergency accessibility and decision-making</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 15: EXPECTED DELIVERABLES -->
+    <section class="section-padding section-bg-alt" id="deliverables">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Project Roadmap</span>
+          <h2 class="section-title">Expected Deliverables</h2>
+          <p class="section-subtitle">
+            Core technical outputs produced under the DeepSRM-AI development roadmap.
+          </p>
+        </div>
+
+        <div class="deliverables-grid">
+          <div class="deliverable-card tilt-card reveal-on-scroll">
+            <div class="deliverable-num">01</div>
+            <div class="deliverable-name">Pre-processing Pipeline</div>
+          </div>
+
+          <div class="deliverable-card tilt-card reveal-on-scroll">
+            <div class="deliverable-num">02</div>
+            <div class="deliverable-name">Trained SRM Model</div>
+          </div>
+
+          <div class="deliverable-card tilt-card reveal-on-scroll">
+            <div class="deliverable-num">03</div>
+            <div class="deliverable-name">Enhanced Imagery & Land-Cover Maps</div>
+          </div>
+
+          <div class="deliverable-card tilt-card reveal-on-scroll">
+            <div class="deliverable-num">04</div>
+            <div class="deliverable-name">Uncertainty / Confidence Maps</div>
+          </div>
+
+          <div class="deliverable-card tilt-card reveal-on-scroll">
+            <div class="deliverable-num">05</div>
+            <div class="deliverable-name">Interactive GIS Dashboard</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11 & 12: BLOG SECTION & SEARCH/FILTER -->
+    <section class="section-padding" id="blog">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Research & Analysis</span>
+          <h2 class="section-title">DeepSRM-AI Insights</h2>
+          <p class="section-subtitle">
+            Technical articles, methodology breakdowns, and research publications on super-resolution satellite mapping.
+          </p>
+        </div>
+
+        <!-- Filter Tabs & Search Bar -->
+        <div class="blog-controls reveal-on-scroll">
+          <div class="blog-filter-tabs">
+            <button class="blog-filter-btn active" data-filter="all">All Articles</button>
+            <button class="blog-filter-btn" data-filter="super-resolution">Super Resolution</button>
+            <button class="blog-filter-btn" data-filter="architecture">Architecture</button>
+            <button class="blog-filter-btn" data-filter="applications">Applications</button>
+            <button class="blog-filter-btn" data-filter="uncertainty">Uncertainty & AI</button>
+          </div>
+
+          <div class="blog-search-box">
+            <svg class="search-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="blog-search-input" class="blog-search-input" placeholder="Search research articles...">
+          </div>
+        </div>
+
+        <!-- Dynamic Blog Cards Grid -->
+        <div class="blog-grid" id="blog-grid">
+          <!-- Populated dynamically by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 13: TEAM SECTION WITH ACTUAL TEAM MEMBERS -->
+    <section class="section-padding section-bg-alt" id="team">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Project Team</span>
+          <h2 class="section-title">AMASTRA TECH</h2>
+          <p class="section-subtitle">
+            Building intelligent solutions for spatial understanding.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Team Lead -->
+          <div class="team-card tilt-card reveal-on-scroll">
+            <div class="team-avatar">AR</div>
+            <h3 class="team-name">Aswajith R</h3>
+            <div class="team-role">Team Lead & AI/ML Lead</div>
+            <p class="team-desc">Overall project coordination, deep learning architecture design, model training, and spectral loss optimization.</p>
+          </div>
+
+          <!-- Team Member 1 -->
+          <div class="team-card tilt-card reveal-on-scroll">
+            <div class="team-avatar">MM</div>
+            <h3 class="team-name">M Mridhula</h3>
+            <div class="team-role">Data & Research Lead</div>
+            <p class="team-desc">Sentinel-2 dataset curation, sub-pixel alignment, literature review, and domain accuracy validation.</p>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="team-card tilt-card reveal-on-scroll">
+            <div class="team-avatar">AM</div>
+            <h3 class="team-name">Arjumaan M</h3>
+            <div class="team-role">System Integration & Security</div>
+            <p class="team-desc">Model deployment pipeline, cloud infrastructure, system integration, and security protocols.</p>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="team-card tilt-card reveal-on-scroll">
+            <div class="team-avatar">AA</div>
+            <h3 class="team-name">Abhirami A</h3>
+            <div class="team-role">Frontend & UI/UX Developer</div>
+            <p class="team-desc">Interactive GIS dashboard UI/UX design, visual identity, responsive web interface, and dynamic user experience.</p>
+          </div>
+
+          <!-- Team Member 4 -->
+          <div class="team-card tilt-card reveal-on-scroll">
+            <div class="team-avatar">SK</div>
+            <h3 class="team-name">Shrimathi KN</h3>
+            <div class="team-role">Backend & API Developer</div>
+            <p class="team-desc">Backend architecture, RESTful API development, geospatial model inference service, and database management.</p>
+          </div>
+
+          <!-- Team Member 5 -->
+          <div class="team-card tilt-card reveal-on-scroll">
+            <div class="team-avatar">KS</div>
+            <h3 class="team-name">Kalaiyarasan S</h3>
+            <div class="team-role">GIS & Route Intelligence</div>
+            <p class="team-desc">GIS mapping algorithms, spatial coordinate transformation, route intelligence, and geospatial analytics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 14: RESEARCH & REFERENCES -->
+    <section class="section-padding" id="references">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Academic Foundations</span>
+          <h2 class="section-title">Research & References</h2>
+          <p class="section-subtitle">
+            Key literature, benchmarks, and technical handbooks supporting the DeepSRM-AI methodology.
+          </p>
+        </div>
+
+        <div class="ref-grid">
+          <div class="ref-card tilt-card reveal-on-scroll">
+            <div class="ref-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="ref-title">Copernicus Sentinel-2 User Handbook</h3>
+              <p class="ref-desc">European Space Agency (ESA) official specification for Level-2A surface reflectance products and spectral band characteristics.</p>
+            </div>
+          </div>
+
+          <div class="ref-card tilt-card reveal-on-scroll">
+            <div class="ref-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="ref-title">Super-Resolution for Land-Cover Prediction</h3>
+              <p class="ref-desc">Sub-pixel spatial mapping algorithms and categorical classification principles in remote sensing literature.</p>
+            </div>
+          </div>
+
+          <div class="ref-card tilt-card reveal-on-scroll">
+            <div class="ref-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="ref-title">CNN-Based SR Land-Cover Mapping</h3>
+              <p class="ref-desc">Deep learning convolutional neural network architectures applied to multispectral satellite super-resolution.</p>
+            </div>
+          </div>
+
+          <div class="ref-card tilt-card reveal-on-scroll">
+            <div class="ref-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="ref-title">Deep Learning for SR and Semantic Segmentation</h3>
+              <p class="ref-desc">IEEE Geoscience & Remote Sensing Society research on joint multi-task spatial-spectral learning models.</p>
+            </div>
+          </div>
+
+          <div class="ref-card tilt-card reveal-on-scroll">
+            <div class="ref-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="ref-title">SEN2VENUS Benchmark Dataset</h3>
+              <p class="ref-desc">Open multispectral paired benchmark dataset containing Sentinel-2 (10m) and VENµS (5m) surface reflectance scenes.</p>
+            </div>
+          </div>
+
+          <div class="ref-card tilt-card reveal-on-scroll">
+            <div class="ref-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="ref-title">ESA OpenSR Toolkit</h3>
+              <p class="ref-desc">European Space Agency open-source benchmarking ecosystem for evaluating satellite super-resolution models.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- DYNAMIC BLOG ARTICLE MODAL OVERLAY -->
+  <div class="modal-overlay" id="article-modal-overlay">
+    <div class="article-modal-container">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close article">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="article-header">
+        <div class="article-meta-bar">
+          <span class="blog-category-badge" id="modal-article-category">Super Resolution</span>
+          <span id="modal-article-date">September 2026</span>
+          <span>•</span>
+          <span id="modal-article-readtime">5 min read</span>
+        </div>
+        
+        <h1 class="article-title" id="modal-article-title">Article Title</h1>
+        <p style="font-size: 1.1rem; color: var(--text-muted);" id="modal-article-subtitle">Article Subtitle</p>
+
+        <div class="article-author-box">
+          <div class="author-avatar">AT</div>
+          <div>
+            <div class="author-name">AMASTRA TECH</div>
+            <div class="author-role">SIH26142 Research Team</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-content" id="modal-article-body">
+        <!-- Injected dynamically by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 10 & 14: FOOTER / CONTACT -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">AMASTRA TECH</div>
+          <p class="footer-text">
+            DeepSRM-AI — Deep Learning Based Super Resolution Mapping (SRM) from Medium Resolution Satellite Imageries.
+          </p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="badge badge-primary">SIH26142</span>
+            <span class="badge badge-indigo">Space Technology</span>
+            <span class="badge badge-cyan">Software Category</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-column-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Home / Hero</a></li>
+            <li><a href="#about" class="footer-link">About Project</a></li>
+            <li><a href="#technology" class="footer-link">Technical Approach</a></li>
+            <li><a href="#innovation" class="footer-link">Innovations</a></li>
+            <li><a href="#applications" class="footer-link">Applications</a></li>
+            <li><a href="#gis-simulator" class="footer-link">GIS Simulator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-column-title">Research & Articles</div>
+          <ul class="footer-links">
+            <li><a href="#blog" class="footer-link">Why 10m Needs SRM</a></li>
+            <li><a href="#blog" class="footer-link">Inside DeepSRM-AI Pipeline</a></li>
+            <li><a href="#blog" class="footer-link">AI for Agriculture & Urban</a></li>
+            <li><a href="#blog" class="footer-link">Spectral Consistency</a></li>
+            <li><a href="#blog" class="footer-link">Uncertainty Maps in AI</a></li>
+            <li><a href="#references" class="footer-link">Academic References</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 AMASTRA TECH. Developed for Smart India Hackathon (SIH26142). All rights reserved.
+        </div>
+        <div style="font-size: 0.8rem; color: #a78bfa;">
+          Built with HTML5, CSS3 & Vanilla JavaScript
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- JavaScript Engine -->
+  <script src="script.js"></script>
+</body>
+</html>
